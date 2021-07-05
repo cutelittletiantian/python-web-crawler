@@ -137,3 +137,7 @@ dmypy.json
 /.idea/python-web-crawler.iml
 /.idea/vcs.xml
 /.idea/workspace-Michael-Du.xml
+/05爬图片、批量爬/demo05-2只爬一张图片直接链接：jpg转无损png图片/result/
+/05爬图片、批量爬/demo05-3按照图片直接链接规律组装链接批量爬/result/
+/05爬图片、批量爬/demo05-1文件读写操作/demo05-1-2读取、新建写或重新写/result/
+/04-可视化：词云图/demo04-1查pyecharts文档画一个粗浅的词云/result/
