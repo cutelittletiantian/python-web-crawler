@@ -138,3 +138,7 @@ dmypy.json
 /.idea/vcs.xml
 /.idea/workspace-Michael-Du.xml
 */*/result/
+/05爬图片、批量爬/demo05-6批量爬多页高清壁纸（注意指的不是预览图）/result_preview/
+/04-可视化/可视化2-折线图/demo折线1-多折线复合图/result/
+/04-可视化/可视化1-词云图/demo词云1-查pyecharts文档画一个粗浅的词云/result/
+/05爬图片、批量爬/demo05-1文件读写操作/demo05-1-2读取、新建写或重新写/result/
