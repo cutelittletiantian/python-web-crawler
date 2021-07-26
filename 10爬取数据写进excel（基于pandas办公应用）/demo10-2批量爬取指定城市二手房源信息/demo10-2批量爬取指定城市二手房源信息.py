@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from bs4.element import Tag
 import pandas as pd
 from pandas import DataFrame, Series
+import os
 
 # 页面模板，{0}处填写的页面从1开始
 urlTempPage = "https://cd.ke.com/ershoufang/pg{0}su1ie2sf1l2p5/"
@@ -98,6 +99,9 @@ for urlDetail in urlDetails:
 df = pd.DataFrame(columns=tblHeader, data=tblValues)
 
 # 写入excel
-targetPath = "二手房.xlsx"
-with pd.ExcelWriter(path=targetPath, engine="openpyxl", mode="w") as writer:
+targetPath = "result"
+if not os.path.exists(path=targetPath):
+    os.mkdir(path=targetPath)
+targetName = "二手房.xlsx"
+with pd.ExcelWriter(path=os.path.join(targetPath, targetName), engine="openpyxl", mode="w") as writer:
     df.to_excel(excel_writer=writer, sheet_name="成都")

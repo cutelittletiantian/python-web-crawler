@@ -1,3 +1,4 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 from bs4.element import Tag
@@ -55,7 +56,10 @@ tblHeader = [headerItem.text for headerItem
 df = pandas.DataFrame(data=tblData, columns=tblHeader)
 
 # 保存路径
-targetPath = "公务员职位信息.xlsx"
+targetPath = "result"
+if not os.path.exists(path=targetPath):
+    os.mkdir(path=targetPath)
+targetName = "公务员职位信息.xlsx"
 # 写入excel文档
-with pandas.ExcelWriter(path=targetPath, engine="openpyxl", mode="w") as writer:
+with pandas.ExcelWriter(path=os.path.join(targetPath, targetName), engine="openpyxl", mode="w") as writer:
     df.to_excel(excel_writer=writer, sheet_name="计算机科学与技术")
